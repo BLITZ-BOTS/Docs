@@ -9,6 +9,7 @@
 ## Dependencies
 
 * [Docker](dependencies/docker.md)
+* [BLITZ Builder](dependencies/blitz-builder.md)
 
 ## Troubleshooting
 
@@ -16,7 +17,7 @@
 
 ## Develop
 
-* [Page 1](develop/page-1.md)
+* [Creating Your First Plugin](develop/creating-your-first-plugin.md)
 
 ***
 
