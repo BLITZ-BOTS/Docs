@@ -19,8 +19,7 @@ export default {
   ) => {
     console.log(`${client.user.username} is online!`)
     }
-  },
-};
+  };
 ```
 
 This code adds a simple ready event to your plugin which will log in the console when the client has logged in.
