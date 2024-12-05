@@ -4,21 +4,11 @@
 
 ## Getting Started
 
-* [Installation](getting-started/quickstart.md)
-
-## Dependencies
-
-* [Docker](dependencies/docker.md)
-* [BLITZ Builder](dependencies/blitz-builder.md)
-
-## Troubleshooting
-
-* [Docker Install](troubleshooting/docker-install.md)
+* [Create A Bot](getting-started/create-a-bot.md)
+* [Installing A Plugin](getting-started/installing-a-plugin.md)
 
 ## Develop
 
-* [Creating Your First Plugin](develop/creating-your-first-plugin.md)
-
-***
-
-* [BLITZ WIP Tracker](blitz-wip-tracker.md)
+* [Create A Plugin](develop/create-a-plugin.md)
+* [Add An Event](develop/add-an-event.md)
+* [Add A Command](develop/add-a-command.md)
