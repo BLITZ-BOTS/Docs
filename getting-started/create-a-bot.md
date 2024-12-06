@@ -11,7 +11,7 @@ There are 2 methods to create a bot, manually or using the[ <mark style="color:r
 Using the blitz cli to create a bot is as simple as running one command!
 
 ```bash
-deno run -A jsr:@blitz-bots/cli bot
+blitz bot
 ```
 
 ## Manually

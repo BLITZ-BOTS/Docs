@@ -1,5 +1,5 @@
 ---
-description: Create your first Blitz bot to install plugins onto.
+description: Create your first Blitz plugin for users to install.
 ---
 
 # Create A Plugin
@@ -8,10 +8,10 @@ There are 2 methods to create a plugin, manually or using the[ <mark style="colo
 
 ## Blitz CLI
 
-Using the blitz cli to create a bot is as simple as running one command!
+Using the blitz cli to create a plugin is as simple as running one command!
 
 ```bash
-deno run -A jsr:@blitz-bots/cli plugin
+blitz plugin
 ```
 
 ## Manually
@@ -20,7 +20,7 @@ If you prefer to manually create the plugin, it is also very simple!
 
 Then, you need to edit the file structure to look like this:
 
-```
+```yaml
 ├── /commands
 ├── /events
 └── blitz.config.yaml
@@ -28,7 +28,7 @@ Then, you need to edit the file structure to look like this:
 
 Next up, adding the bots code! Edit `blitz.config.yaml` to contain the metadata for your plugin
 
-```typescript
+```yaml
 name: MyPlugin
 description: My totally cool plugin
 version: 1.0.0

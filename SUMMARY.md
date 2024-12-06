@@ -7,6 +7,7 @@
 * [CLI Install](getting-started/cli-install.md)
 * [Create A Bot](getting-started/create-a-bot.md)
 * [Installing A Plugin](getting-started/installing-a-plugin.md)
+* [Customizing Plugins](getting-started/customizing-plugins.md)
 
 ## Develop
 
