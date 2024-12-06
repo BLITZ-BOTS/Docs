@@ -8,11 +8,11 @@ All commands must be placed inside of the `/commands` folder inside of your plug
 
 Create a new file called `ping.ts` inside of your commands folder.
 
-<pre class="language-typescript"><code class="lang-typescript">import { CommandInteraction } from 'discord.js';
+<pre class="language-typescript"><code class="lang-typescript">import { CommandInteraction, Client } from 'discord.js';
 <strong>export default {
 </strong>     name: 'ping',
      description: 'Pong!',
-     action: async (interaction: CommandInteraction) => {
+     action: async (client: Client, interaction: CommandInteraction) => {
          await interaction.reply(`Pong!`);
      },
 };
