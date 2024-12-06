@@ -8,15 +8,19 @@ All commands must be placed inside of the `/commands` folder inside of your plug
 
 Create a new file called `ping.ts` inside of your commands folder.
 
-<pre class="language-typescript"><code class="lang-typescript">import { CommandInteraction, Client } from 'discord.js';
-<strong>export default {
-</strong>     name: 'ping',
-     description: 'Pong!',
-     action: async (client: Client, interaction: CommandInteraction) => {
-         await interaction.reply(`Pong!`);
-     },
+```typescript
+import { SlashCommandBuilder } from "npm:discord.js";
+
+export default {
+  data: new SlashCommandBuilder()
+    .setName("ping")
+    .setDescription("Pong!")
+  action: async (client, interaction, config) => {
+    await interaction.reply({ content: `Pong!` });
+  }
 };
-</code></pre>
+
+```
 
 This code adds a simple ping command to your plugin which will return "Pong!" when a member uses the `/ping` command.
 
