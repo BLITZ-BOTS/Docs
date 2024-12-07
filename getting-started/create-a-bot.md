@@ -54,6 +54,12 @@ The code above uses the `Bot` class from the [<mark style="color:red;">@blitz-bo
 
 We will now set the bots token in the .env file so we can access the client.
 
+{% hint style="info" %}
+You can skip this step if you run the `blitz bot` command with the `-t` flag
+{% endhint %}
+
+
+
 Head over to `.env` and add `DISCORD_TOKEN="".`
 
 Your file should look like this:
