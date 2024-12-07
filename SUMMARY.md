@@ -14,3 +14,7 @@
 * [Create A Plugin](develop/create-a-plugin.md)
 * [Add An Event](develop/add-an-event.md)
 * [Add A Command](develop/add-a-command.md)
+
+## Errors
+
+* [Page 1](errors/page-1.md)
