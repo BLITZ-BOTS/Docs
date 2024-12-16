@@ -50,6 +50,13 @@
         "create/bot",
         "create/plugin"
       ]
+    },
+    {
+      "group": "Plugins",
+      "pages": [
+        "plugins/install",
+        "plugins/configure"
+      ]
     }
   ],
   "footerSocials": {

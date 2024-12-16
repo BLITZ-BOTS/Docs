@@ -1,0 +1,50 @@
+---
+title: Install A Plugin
+description: 'Install a plugin onto your bot.'
+---
+
+There are 2 ways to install a plugin, through the [Controller App](/installation/controller) or through the [Blitz CLI](/installation/cli).
+
+## CLI Command
+
+### Install Latest Version
+Install the latest version of a plugin.
+```bash Terminal
+blitz install <plugin_name>
+```
+
+### Install Specific Version
+Install a specific version of a plugin.
+```bash Terminal
+blitz install <plugin_name>@<version>
+```
+
+<ParamField path="plugin_name" type="string" required>
+  The name of the plugin
+</ParamField>
+
+
+<ParamField path="version" type="number">
+  The version of the plugin you want to install
+</ParamField>
+
+
+## Controller App
+<Warning>
+Currently you can only install the latest version of a plugin from the app.
+</Warning>
+
+<Steps>
+  <Step title="Edit A Bot">
+    Click on the pencil icon on one of your bot's cards.
+  </Step>
+  <Step title="Find Plugins Input">
+    Find the "Add New Plugin" section.
+  </Step>
+  <Step title="Specify Plugin">
+    Enter the name of the plugin you want to install into the input.
+  </Step>
+    <Step title="Install">
+    Click "Add" to install the plugin.
+  </Step>
+</Steps>
