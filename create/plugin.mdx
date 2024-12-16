@@ -111,9 +111,9 @@ export default {
   data: new SlashCommandBuilder()
     .setName("ping")
     .setDescription("Pong!"),
-        action: async (client, interaction) => {
-        await interaction.reply({ content: `Pong!` });
-    }
+  action: async (client, interaction) => {
+    await interaction.reply({ content: `Pong!` });
+  },
 };
 ```
 
@@ -130,9 +130,9 @@ export default {
   data: new SlashCommandBuilder()
     .setName("greet")
     .setDescription("Greet someone"),
-        action: async (client, interaction, config) => {
-        await interaction.reply({ content: `${config.greetMsg}` });
-    }
+  action: async (client, interaction, config) => {
+    await interaction.reply({ content: `${config.greetMsg}` });
+  },
 };
 ```
 
@@ -145,4 +145,41 @@ version: 1.0.0
 
 config:
     greetMsg: "Welcome to the server!"
+```
+
+
+## Events
+All events for a plugin **must** go inside of the ``/events`` folder in the root of the plugin.
+
+### Example Event
+```typescript ready.ts
+export default {
+  event: "ready",
+  once: true,
+  action: async (client) => {
+    console.log(`${client.user.username} is online!`);
+  },
+};
+```
+
+### Example Event (Config)
+```typescript message.ts
+export default {
+  event: "messageCreate",
+  once: true,
+  action: async (client, config, message) => {
+    message.reply(`${config.message}`);
+  },
+};
+```
+
+For this event to work you would **have** to add ``message`` to your ``blitz.config.yaml`` file.
+
+```yaml blitz.config.yaml
+name: my_plugin
+description: My totally cool plugin
+version: 1.0.0
+
+config:
+    message: "I replied to a message!"
 ```
