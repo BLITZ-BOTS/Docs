@@ -1,0 +1,65 @@
+---
+title: Create A Bot
+description: 'Create a new Blitz bot to start using Blitz plugins'
+---
+
+There are 2 ways to create a new bot, through the [Controller App](/installation/controller) or through the [Blitz CLI](/installation/cli).
+
+
+## CLI Command
+```bash Terminal
+blitz bot
+```
+
+You can also pass in options to bypass manual tasks such as setting the bots token.
+
+#### Flags
+<ParamField path="-t" type="string">
+  Your bots token to place inside the .env file
+</ParamField>
+
+
+
+## Controller App
+Create a bot from the homepage of the controller app.
+<Steps>
+  <Step title="Open Create Dialoge">
+    Click "Create New Bot" button on the homepage.
+  </Step>
+  <Step title="Set Bot Name">
+    Enter bot local name *(name for the folder on your local device)*.
+  </Step>
+  <Step title="Set Bot Token">
+    Enter the bots token to place inside the .env file.
+  </Step>
+    <Step title="Finish">
+    Click "Create Bot" to create the files.
+  </Step>
+</Steps>
+ 
+
+## Files
+
+### Structure
+Your bot should have a similar structure to this.
+
+```bash File Structure
+├── deno.json
+├── bot.ts
+├── .env
+└── /plugins
+```
+
+### Uses
+<ParamField path="deno.json">
+  Used to init a new [Deno](https://deno.com/) project.
+</ParamField>
+<ParamField path="bot.ts">
+  Contains the code to load your bot and the plugins.
+</ParamField>
+<ParamField path=".env">
+  Stores your discord bot token as an environment variable.
+</ParamField>
+<ParamField path="/plugins">
+  Holds all of the plugins you install onto a bot.
+</ParamField>

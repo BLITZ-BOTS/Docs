@@ -38,7 +38,18 @@
     },
     {
       "group": "CLI",
-      "pages": ["cli/auth"]
+      "pages": [
+        "cli/auth",
+        "cli/publish",
+        "cli/delete"
+      ]
+    },
+    {
+      "group": "Create",
+      "pages": [
+        "create/bot",
+        "create/plugin"
+      ]
     }
   ],
   "footerSocials": {
