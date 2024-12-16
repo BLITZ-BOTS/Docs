@@ -79,7 +79,7 @@ version: 1.0.0
 #### Adding Config
 You can add config values inside of your plugins ``blitz.config.yaml`` file which will be passed into your plugins commands and events.
 
-```yaml blitz.config.yaml
+```yaml blitz.config.yaml {5-6}
 name: my_plugin
 description: My totally cool plugin
 version: 1.0.0
@@ -88,7 +88,7 @@ config:
     cool_message: "This is a cool message"
 ```
 
-This basic example of a blitz.config.yaml file contains a config value called ``cool_message``.
+This basic example of a blitz.config.yaml file contains a config key called ``cool_message``.
 In any of the plugins commands or events you can access this.
 
 ```typescript Event.ts
@@ -123,7 +123,7 @@ Notice the import from ``npm:discord.js``? This is a specific [deno](https://den
 
 #### Example Command (Config)
 
-```typescript greet.ts
+```typescript greet.ts {7-8}
 import { SlashCommandBuilder } from "npm:discord.js";
 
 export default {
@@ -163,7 +163,7 @@ export default {
 ```
 
 ### Example Event (Config)
-```typescript message.ts
+```typescript message.ts {4-5}
 export default {
   event: "messageCreate",
   once: true,

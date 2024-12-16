@@ -2,3 +2,59 @@
 title: Configure A Plugin
 description: 'Configure a plugin to fit your needs.'
 ---
+
+<Info>
+Some plugins may not have config.
+</Info>
+
+There are 2 ways to install a plugin, through the [Controller App](/installation/controller) or through an [IDE](https://www.codecademy.com/article/what-is-an-ide).
+
+## IDE
+To edit a plugins config, locate the plugins folder inside of the ``/plugins`` directory.
+
+You will then need to find the plugins ``blitz.config.yaml`` file.
+
+To edit the config, all you need to do is update it's value inside of the plugins config file.
+
+### Example blitz.config.yaml
+```yaml blitz.config.yaml
+name: my_plugin
+description: My totally cool plugin
+version: 1.0.0
+
+config:
+    cool_message: "This is a cool message"
+```
+
+This basic example of a blitz.config.yaml file contains a config key called ``cool_message``. Currently the value is ``This is a cool message``.
+
+```yaml blitz.config.yaml {6}
+name: my_plugin
+description: My totally cool plugin
+version: 1.0.0
+
+config:
+    cool_message: "This is an updated config message!"
+```
+After updating the config file, the new value for ``cool_message`` would be ``This is an updated config message!``.
+
+
+## Controller App
+
+<Steps>
+    <Step title="Edit A Bot">
+    Click on the pencil icon on one of your bot's cards.
+  </Step>
+  <Step title="Find Plugins">
+    Find the "Plugins" section and locate the plugin you want to configure.
+  </Step>
+  <Step title="Open Plugin Settings">
+    Click on the settings cog on the plugins card.
+  </Step>
+    <Step title="Find Config Value">
+    Locate the config value you want to update.
+  </Step>
+      <Step title="Update">
+    Enter the new value for the config key inside of the input box.
+  </Step>
+</Steps>
