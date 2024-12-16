@@ -1,0 +1,34 @@
+---
+title: CLI Installation
+description: 'Install the Blitz CLI for seemless communication from the comfort of your terminal'
+---
+
+
+## Prerequisites
+
+<Warning>
+  The CLI will not work if you do not have these installed. If you receive any errors when installing, please make sure you have all of these installed.
+</Warning>
+
+### Deno
+<CodeGroup>
+```bash Windows (Powershell)
+irm https://deno.land/install.ps1 | iex
+```
+```bash Linux (Shell)
+curl -fsSL https://deno.land/install.sh | sh
+```
+```bash macOS (Shell)
+curl -fsSL https://deno.land/install.sh | sh
+```
+</CodeGroup>
+
+Find more installation options [here](https://docs.deno.com/runtime/getting_started/installation/#installation)
+
+
+
+## Installation
+You can install the CLI globally from [JSR](https://jsr.io/@blitz-bots/cli) using Deno. This command will install the CLI with all the needed permissions.
+```bash Terminal
+deno install --global --allow-run -N -R -W -E -n blitz jsr:@blitz-bots/cli
+```
