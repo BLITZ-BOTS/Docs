@@ -55,6 +55,7 @@
       "group": "Plugins",
       "pages": [
         "plugins/install",
+        "plugins/uninstall",
         "plugins/configure"
       ]
     }
