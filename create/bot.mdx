@@ -63,3 +63,35 @@ Your bot should have a similar structure to this.
 <ParamField path="/plugins">
   Holds all of the plugins you install onto a bot.
 </ParamField>
+
+
+
+
+## Class Props
+You can add more config options into the [Bot Class](https://github.com/BLITZ-BOTS/Bot/blob/main/src/Bot.ts).
+
+### Custom Intents
+```typescript Bot.ts
+const customIntents = [
+  IntentsBitField.Flags.Guilds,
+  IntentsBitField.Flags.GuildMessages,
+];
+
+const bot = new Bot({ token: token, intents: customIntents });
+bot.start();
+```
+
+
+
+### Custom Plugin Directory
+```typescript Bot.ts
+const bot = new Bot({ token: token, pluginsDir: "./custom_plugins" });
+bot.start();
+```
+
+
+### Load Command In A Single Guild
+```typescript Bot.ts
+const bot = new Bot({ token: token, server: "123456789101112" });
+bot.start();
+```
