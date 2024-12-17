@@ -72,7 +72,7 @@ version: 1.0.0
 
 
 <ParamField path="version" type="number" required>
-  The name of your plugin
+  The version of your plugin
 </ParamField>
 
 
@@ -183,3 +183,17 @@ version: 1.0.0
 config:
     message: "I replied to a message!"
 ```
+
+
+## Test Plugin
+You can test a plugin locally with one command.
+
+### CLI Command
+```bash Terminal
+blitz test <token>
+```
+
+#### CLI Params
+<ParamField path="token" type="string" required>
+  Your bots token to test the plugin on
+</ParamField>
