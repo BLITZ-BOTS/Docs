@@ -58,6 +58,12 @@
         "plugins/uninstall",
         "plugins/configure"
       ]
+    },
+        {
+      "group": "Hosting",
+      "pages": [
+        "hosting/host-a-bot"
+      ]
     }
   ],
   "footerSocials": {
