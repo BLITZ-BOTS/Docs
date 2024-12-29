@@ -4,13 +4,15 @@ description: 'Create a new Blitz plugin to install on Blitz bots'
 ---
 
 <Info>
-Currently, you can only create a plugin through the [Blitz CLI](/installation/cli).
+  When creating plugins, you should avoid using Deno or Node specific features to make your plugin compatible with both the JSR and NPM package.
 </Info>
 
 ### CLI Command
+
 ```bash Terminal
 blitz plugin
 ```
+
 You will then be asked questions to help Blitz create the config file for you.
 
 #### Questions
@@ -23,15 +25,14 @@ You will then be asked questions to help Blitz create the config file for you.
   A short description of what your plugin does
 </ParamField>
 
-
 <ParamField path="Version" type="number" required>
   The name of your plugin
 </ParamField>
 
-
 ## Files
 
 ### Structure
+
 Your plugin should have a similar structure to this.
 
 ```bash File Structure
@@ -41,20 +42,25 @@ Your plugin should have a similar structure to this.
 ```
 
 ### Uses
+
 <ParamField path="/commands">
   Holds the commands for your plugin.
 </ParamField>
+
 <ParamField path="/events">
   Holds the events for your plugin.
 </ParamField>
+
 <ParamField path="blitz.config.yaml" required>
   Holds the manifest data and config for your plugin.
 </ParamField>
 
 ### blitz.config.yaml
-The ``blitz.config.yaml`` file contains all the metadata for your plugin. You can also add config valuese to this to allow users to customize your plugin.
+
+The `blitz.config.yaml` file contains all the metadata for your plugin. You can also add config valuese to this to allow users to customize your plugin.
 
 #### Example blitz.config.yaml
+
 ```yaml blitz.config.yaml
 name: my_plugin
 description: My totally cool plugin
@@ -62,6 +68,7 @@ version: 1.0.0
 ```
 
 #### Manifest Values
+
 <ParamField path="name" type="string" required>
   The name of your plugin
 </ParamField>
@@ -70,14 +77,13 @@ version: 1.0.0
   A short description of what your plugin does
 </ParamField>
 
-
 <ParamField path="version" type="number" required>
   The version of your plugin
 </ParamField>
 
-
 #### Adding Config
-You can add config values inside of your plugins ``blitz.config.yaml`` file which will be passed into your plugins commands and events.
+
+You can add config values inside of your plugins `blitz.config.yaml` file which will be passed into your plugins commands and events.
 
 ```yaml blitz.config.yaml {5-6}
 name: my_plugin
@@ -88,22 +94,25 @@ config:
     cool_message: "This is a cool message"
 ```
 
-This basic example of a blitz.config.yaml file contains a config key called ``cool_message``.
+This basic example of a blitz.config.yaml file contains a config key called `cool_message`.
 In any of the plugins commands or events you can access this.
 
 ```typescript Event.ts
 console.log(config.cool_message)
 ```
-This would log ``This is a cool message``.
+
+This would log `This is a cool message`.
 
 ## Commands
-All commands for a plugin **must** go inside of the ``/commands`` folder in the root of the plugin.
+
+All commands for a plugin **must** go inside of the `/commands` folder in the root of the plugin.
 
 <Info>
-Commands are built using the [discord.js SlashCommandBuilder class](https://discord.js.org/docs/packages/builders/1.9.0/SlashCommandBuilder:Class).
+  Commands are built using the [discord.js SlashCommandBuilder class](https://discord.js.org/docs/packages/builders/1.9.0/SlashCommandBuilder:Class).
 </Info>
 
 ### Example Command
+
 ```typescript ping.ts
 import { SlashCommandBuilder } from "npm:discord.js";
 
@@ -118,7 +127,7 @@ export default {
 ```
 
 <Info>
-Notice the import from ``npm:discord.js``? This is a specific [deno](https://deno.com) import which allows us to use discord.js within deno.
+  Notice the import from `npm:discord.js`? This is a specific [deno](https://deno.com) import which allows us to use discord.js within deno.
 </Info>
 
 #### Example Command (Config)
@@ -136,7 +145,7 @@ export default {
 };
 ```
 
-For this command to work you would **have** to add ``greetMsg`` to your ``blitz.config.yaml`` file.
+For this command to work you would **have** to add `greetMsg` to your `blitz.config.yaml` file.
 
 ```yaml blitz.config.yaml
 name: my_plugin
@@ -147,11 +156,12 @@ config:
     greetMsg: "Welcome to the server!"
 ```
 
-
 ## Events
-All events for a plugin **must** go inside of the ``/events`` folder in the root of the plugin.
+
+All events for a plugin **must** go inside of the `/events` folder in the root of the plugin.
 
 ### Example Event
+
 ```typescript ready.ts
 export default {
   event: "ready",
@@ -163,6 +173,7 @@ export default {
 ```
 
 ### Example Event (Config)
+
 ```typescript message.ts {4-5}
 export default {
   event: "messageCreate",
@@ -173,7 +184,7 @@ export default {
 };
 ```
 
-For this event to work you would **have** to add ``message`` to your ``blitz.config.yaml`` file.
+For this event to work you would **have** to add `message` to your `blitz.config.yaml` file.
 
 ```yaml blitz.config.yaml
 name: my_plugin
@@ -184,16 +195,18 @@ config:
     message: "I replied to a message!"
 ```
 
-
 ## Test Plugin
+
 You can test a plugin locally with one command.
 
 ### CLI Command
+
 ```bash Terminal
 blitz test <token>
 ```
 
 #### CLI Params
+
 <ParamField path="token" type="string" required>
   Your bots token to test the plugin on
 </ParamField>
